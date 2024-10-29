@@ -22,10 +22,22 @@ const palatino = localFont({
     {
       path: "../utils/fonts/Palatino/pala.ttf",
       weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../utils/fonts/Palatino/palai.ttf",
+      weight: "400",
+      style: "italic",
     },
     {
       path: "../utils/fonts/Palatino/palab.ttf",
-      weight: "600",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../utils/fonts/Palatino/palabi.ttf",
+      weight: "700",
+      style: "italic",
     },
   ],
   variable: "--font-palatino",

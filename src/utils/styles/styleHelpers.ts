@@ -4,14 +4,7 @@ export const fullHeightSection: CSSProperties = {
   width: "100%",
   maxWidth: "100vw",
   minHeight: "100vh",
-  flex: "1 0 auto",
 
-  display: "flex",
-  flexDirection: "column",
-};
-
-export const fullHeightFlex: CSSProperties = {
-  flex: 1,
   display: "flex",
   flexDirection: "column",
 };

@@ -31,6 +31,16 @@ export const theme = createTheme({
     background: {
       default: bgColor,
     },
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 1536,
+        fullHd: 1920,
+      },
+    },
     components: getOverridesComponent(),
     typography: getTypography(),
     cssVariables: true,

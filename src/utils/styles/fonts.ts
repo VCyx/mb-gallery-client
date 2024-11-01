@@ -7,6 +7,8 @@
 
 // export const fontPalatino = ["Palatino", "sans-serif"].join(", ");
 
+// todo maybe delete this file
+
 export const roboto = `
     @font-face {
         font-family: 'Roboto';

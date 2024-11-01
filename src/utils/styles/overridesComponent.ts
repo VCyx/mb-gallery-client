@@ -1,10 +1,14 @@
 import { roboto, robotoBold } from "./fonts";
 import { Components } from "@mui/material/styles";
 import { bgColor, borderColor, primaryColor, secondaryText } from "./colors";
+import { Theme } from "@mui/material/styles/createThemeNoVars";
+import { CssVarsTheme } from "@mui/material/styles/createThemeWithVars";
 
 // ${palatino}
 
-export const getOverridesComponent = (): Components => {
+export const getOverridesComponent = (): Components<
+  Omit<Theme, "components" | "palette"> & CssVarsTheme
+> => {
   return {
     MuiCssBaseline: {
       styleOverrides: `

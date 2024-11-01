@@ -31,18 +31,18 @@ export const theme = createTheme({
     background: {
       default: bgColor,
     },
-    breakpoints: {
-      values: {
-        xs: 0,
-        sm: 600,
-        md: 960,
-        lg: 1280,
-        xl: 1920,
-        ultra: 3840,
-      },
-    },
-    components: getOverridesComponent(),
-    typography: getTypography(),
-    cssVariables: true,
   },
+  components: getOverridesComponent(),
+  typography: getTypography(),
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+      ultra: 3840,
+    },
+  },
+  cssVariables: true,
 });

@@ -9,6 +9,7 @@
         "type": "shared",
         "pattern": [
           "src/components/**/*",
+          "src/@types/**/*",
           "src/data/**/*",
           "src/hooks/**/*",
           "src/lib/**/*",

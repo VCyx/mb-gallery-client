@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 
 export default function Home() {
   return (
@@ -7,8 +7,7 @@ export default function Home() {
       <header>test</header>
 
       <main>
-        <Typography>Hello world</Typography>
-        <Button variant={"contained"}>Test button</Button>
+        <Typography variant="h1">Hello world!</Typography>
       </main>
 
       <footer>

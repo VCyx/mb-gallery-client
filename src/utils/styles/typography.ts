@@ -4,12 +4,12 @@ import { primaryColor, primaryText } from "@/utils/styles/colors";
 export const getTypography = (): TypographyOptions => {
   return {
     h1: {
-      fontFamily: "var(--font-roboto)",
+      fontFamily: "var(--font-palatino)",
       fontStyle: "normal",
       fontWeight: 400,
       fontSize: 94,
       lineHeight: "123px",
-      color: primaryColor,
+      color: primaryText,
     },
     h2: {
       // fontFamily: fontRoboto,
@@ -45,7 +45,7 @@ export const getTypography = (): TypographyOptions => {
       color: primaryText,
     },
     body1: {
-      // fontFamily: fontRoboto,
+      fontFamily: "var(--font-roboto)",
       fontStyle: "normal",
       fontWeight: 400,
       fontSize: 18,

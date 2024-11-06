@@ -1,63 +1,62 @@
-import { roboto, robotoBold } from "./fonts";
 import { Components } from "@mui/material/styles";
-import { bgColor, borderColor, primaryColor, secondaryText } from "./colors";
+import { bgColor, borderColor, primaryColor } from "./colors";
 import { Theme } from "@mui/material/styles/createThemeNoVars";
 import { CssVarsTheme } from "@mui/material/styles/createThemeWithVars";
-
-// ${palatino}
 
 export const getOverridesComponent = (): Components<
   Omit<Theme, "components" | "palette"> & CssVarsTheme
 > => {
   return {
     MuiCssBaseline: {
-      styleOverrides: `
-        html {
-          height: 100%;
-          scroll-behavior: smooth;
-          font-size: 16px;
-        }
-
-        body {
-          box-sizing: border-box;
-          height: 100%;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          overflow-x: hidden;
-        }
-        #__next {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-        }
-        ${roboto}
-        ${robotoBold}
-        a {
-          color: currentColor;
-          text-decoration: none;
+      styleOverrides: {
+        html: {
+          height: "100%",
+          scrollBehavior: "smooth",
+          fontSize: "16px",
         },
-        p, span {
-          color: currentColor;
-          margin: 0;
-          padding: 0;
+        body: {
+          boxSizing: "border-box",
+          height: "100%",
+          margin: 0,
+          padding: 0,
+          display: "flex",
+          overflowX: "hidden",
         },
-        ::-moz-selection {
-          color: ${bgColor};
-          background-color: ${primaryColor};
+        "#__next": {
+          flex: 1,
+          display: "flex",
+          flexDirection: "column",
         },
-        ::selection {
-          color: ${bgColor};
-          background-color: ${primaryColor};
+        a: {
+          color: "currentColor",
+          textDecoration: "none",
         },
-        ::-webkit-scrollbar {
-          width: 10px;
+        p: {
+          color: "currentColor",
+          margin: 0,
+          padding: 0,
         },
-        ::-webkit-scrollbar-thumb {
-          background: ${borderColor};
-          border-radius: 10px;
+        span: {
+          color: "currentColor",
+          margin: 0,
+          padding: 0,
         },
-      `,
+        "::-moz-selection": {
+          color: bgColor,
+          backgroundColor: primaryColor,
+        },
+        "::selection": {
+          color: bgColor,
+          backgroundColor: primaryColor,
+        },
+        "::-webkit-scrollbar": {
+          width: "10px",
+        },
+        "::-webkit-scrollbar-thumb": {
+          background: borderColor,
+          borderRadius: "10px",
+        },
+      },
     },
     MuiLink: {
       styleOverrides: {
@@ -69,7 +68,6 @@ export const getOverridesComponent = (): Components<
           lineHeight: "18px",
           cursor: "pointer",
           textDecoration: "none",
-          ...secondaryText,
         },
       },
     },

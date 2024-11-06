@@ -1,7 +1,7 @@
 "use client";
 
 import { createTheme } from "@mui/material/styles";
-import { bgColor, primaryColor, primaryText } from "./colors";
+import { grey300, black1, black2, primaryColor, primaryText } from "./colors";
 
 import { getOverridesComponent } from "./overridesComponent";
 import { getTypography } from "./typography";
@@ -13,12 +13,15 @@ export const theme = createTheme({
     primary: {
       main: primaryColor,
     },
-    grey: {},
+    grey: {
+      "300": grey300,
+      "400": black1,
+    },
     text: {
       primary: primaryText,
     },
     background: {
-      default: bgColor,
+      default: black2,
     },
   },
   components: getOverridesComponent(),

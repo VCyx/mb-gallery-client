@@ -9,7 +9,7 @@ export const getTypography = (): TypographyOptions => {
       fontWeight: 400,
       fontSize: 48,
       lineHeight: "120%",
-      letterSpacing: 1,
+      letterSpacing: "1%",
       color: primaryText,
     },
     h2: {
@@ -18,7 +18,7 @@ export const getTypography = (): TypographyOptions => {
       fontWeight: 400,
       fontSize: 32,
       lineHeight: "120%",
-      letterSpacing: 1,
+      letterSpacing: "1%",
       color: primaryText,
     },
     h3: {
@@ -27,7 +27,7 @@ export const getTypography = (): TypographyOptions => {
       fontWeight: 400,
       fontSize: 24,
       lineHeight: "120%",
-      letterSpacing: 1,
+      letterSpacing: "1%",
       color: primaryText,
     },
     subtitle1: {
@@ -36,7 +36,7 @@ export const getTypography = (): TypographyOptions => {
       fontWeight: 400,
       fontSize: 20,
       lineHeight: "120%",
-      letterSpacing: 1,
+      letterSpacing: "1%",
       color: primaryText,
     },
     subtitle2: {
@@ -45,7 +45,7 @@ export const getTypography = (): TypographyOptions => {
       fontWeight: 400,
       fontSize: 18,
       lineHeight: "120%",
-      letterSpacing: 1,
+      letterSpacing: "1%",
       color: primaryText,
     },
     body1: {
@@ -54,7 +54,7 @@ export const getTypography = (): TypographyOptions => {
       fontWeight: 400,
       fontSize: 16,
       lineHeight: "140%",
-      letterSpacing: 2,
+      letterSpacing: "2%",
       color: primaryText,
     },
     body2: {
@@ -63,16 +63,17 @@ export const getTypography = (): TypographyOptions => {
       fontWeight: 400,
       fontSize: 14,
       lineHeight: "140%",
-      letterSpacing: 2,
+      letterSpacing: "2%",
       color: primaryText,
     },
-    button1: {
+    button: {
       fontFamily: "var(--font-palatino)",
       fontStyle: "normal",
       fontWeight: 700,
       fontSize: 16,
       lineHeight: "120%",
-      letterSpacing: 1,
+      letterSpacing: "1%",
+      textTransform: "none",
     },
     button2: {
       fontFamily: "var(--font-palatino)",
@@ -80,7 +81,7 @@ export const getTypography = (): TypographyOptions => {
       fontWeight: 700,
       fontSize: 14,
       lineHeight: "120%",
-      letterSpacing: 1,
+      letterSpacing: "1%",
     },
     caption1: {
       fontFamily: "var(--font-palatino)",
@@ -88,7 +89,7 @@ export const getTypography = (): TypographyOptions => {
       fontWeight: 400,
       fontSize: 14,
       lineHeight: "140%",
-      letterSpacing: 2,
+      letterSpacing: "2%",
       color: primaryText,
     },
     caption2: {
@@ -97,7 +98,7 @@ export const getTypography = (): TypographyOptions => {
       fontWeight: 400,
       fontSize: 14,
       lineHeight: "140%",
-      letterSpacing: 2,
+      letterSpacing: "2%",
       color: primaryText,
     },
     overline1: {

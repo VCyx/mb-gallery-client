@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Typography } from "@mui/material";
+import AppRedirectButton from "@/components/AppRedirectButton";
+import { appRoutes } from "@/data/routes";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
 
       <main>
         <Typography variant="h1">Hello world!</Typography>
+
+        <AppRedirectButton route={appRoutes.uiKit}></AppRedirectButton>
       </main>
 
       <footer>

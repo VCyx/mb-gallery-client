@@ -1,5 +1,5 @@
 import { Components } from "@mui/material/styles";
-import { bgColor, borderColor, primaryColor } from "./colors";
+import { bgColor, primaryColor } from "./colors";
 import { Theme } from "@mui/material/styles/createThemeNoVars";
 import { CssVarsTheme } from "@mui/material/styles/createThemeWithVars";
 
@@ -16,16 +16,11 @@ export const getOverridesComponent = (): Components<
         },
         body: {
           boxSizing: "border-box",
+          width: "100%",
           height: "100%",
           margin: 0,
           padding: 0,
-          display: "flex",
           overflowX: "hidden",
-        },
-        "#__next": {
-          flex: 1,
-          display: "flex",
-          flexDirection: "column",
         },
         a: {
           color: "currentColor",
@@ -53,8 +48,8 @@ export const getOverridesComponent = (): Components<
           width: "10px",
         },
         "::-webkit-scrollbar-thumb": {
-          background: borderColor,
-          borderRadius: "10px",
+          // background: borderColor,
+          borderRadius: "8px",
         },
       },
     },

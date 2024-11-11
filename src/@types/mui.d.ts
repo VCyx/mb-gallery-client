@@ -20,11 +20,13 @@ declare module "@mui/material/styles" {
 
   interface TypographyVariants {
     button2: React.CSSProperties;
+    caption2: React.CSSProperties;
     overline2: React.CSSProperties;
   }
 
   interface TypographyVariantsOptions {
     button2?: React.CSSProperties;
+    caption2?: React.CSSProperties;
     overline2?: React.CSSProperties;
   }
 }
@@ -32,6 +34,7 @@ declare module "@mui/material/styles" {
 declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     button2: true;
+    caption2: true;
     overline2: true;
   }
 }

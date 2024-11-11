@@ -6,7 +6,7 @@ import Favourite from "../../../public/icons/favourite.svg";
 import { useState } from "react";
 
 export default function UiKit() {
-  const [selectedChip, setSelectedChip] = useState<number>(null);
+  const [selectedChip, setSelectedChip] = useState<number | null>(null);
 
   const handleDeleteChip = () => {
     console.info("You clicked the delete icon.");
@@ -36,9 +36,9 @@ export default function UiKit() {
       <Typography variant="body2">Body 2</Typography>
       <Typography variant="button">Button1</Typography>
       <Typography variant="button2">Button2</Typography>
-      <Typography variant="caption1">Caption1</Typography>
+      <Typography variant="caption">Caption1</Typography>
       <Typography variant="caption2">Caption2</Typography>
-      <Typography variant="overline1">Overline 1</Typography>
+      <Typography variant="overline">Overline 1</Typography>
       <Typography variant="overline2">Overline 2</Typography>
 
       <br />

@@ -1,11 +1,14 @@
 import { Components } from "@mui/material/styles";
-import { black1, grey300, primaryColor, primaryText } from "./colors";
+import { black1, grey1, grey2, primaryColor, primaryText } from "./colors";
 import { Theme } from "@mui/material/styles/createThemeNoVars";
 import { CssVarsTheme } from "@mui/material/styles/createThemeWithVars";
+import { getTypography } from "@/data/styles/typography";
 
 export const getOverridesComponent = (): Components<
   Omit<Theme, "components" | "palette"> & CssVarsTheme
 > => {
+  const typography = getTypography();
+
   return {
     MuiCssBaseline: {
       styleOverrides: {
@@ -79,10 +82,10 @@ export const getOverridesComponent = (): Components<
           },
           ":active": {
             opacity: 0.8,
-            backgroundColor: grey300,
+            backgroundColor: grey1,
           },
           ":disabled": {
-            backgroundColor: grey300,
+            backgroundColor: grey1,
           },
         },
 
@@ -102,6 +105,27 @@ export const getOverridesComponent = (): Components<
             borderWidth: 0.5,
             backgroundColor: "transparent",
           },
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        outlined: {
+          color: primaryText,
+          ...typography.caption,
+          border: `0.5px solid ${primaryText}`,
+          borderRadius: 16,
+          ":hover": {
+            backgroundColor: grey2,
+          },
+        },
+        icon: {
+          width: 16,
+          height: 16,
+        },
+        deleteIcon: {
+          width: 16,
+          height: 16,
         },
       },
     },

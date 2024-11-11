@@ -83,7 +83,7 @@ export const getTypography = (): TypographyOptions => {
       lineHeight: "120%",
       letterSpacing: "1%",
     },
-    caption1: {
+    caption: {
       fontFamily: "var(--font-palatino)",
       fontStyle: "normal",
       fontWeight: 400,
@@ -101,7 +101,7 @@ export const getTypography = (): TypographyOptions => {
       letterSpacing: "2%",
       color: primaryText,
     },
-    overline1: {
+    overline: {
       fontFamily: "var(--font-roboto)",
       fontStyle: "normal",
       fontWeight: 500,

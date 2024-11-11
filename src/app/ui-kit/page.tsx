@@ -1,6 +1,13 @@
 "use client";
 
-import { Box, Button, Checkbox, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Checkbox,
+  Stack,
+  Switch,
+  Typography,
+} from "@mui/material";
 import Favourite from "../../../public/icons/favourite.svg";
 import { Fragment, useState } from "react";
 import Chip from "@/components/Chip/Chip";
@@ -101,6 +108,8 @@ export default function UiKit() {
 
       <Checkbox size="small" color="primary" />
       <Checkbox size="small" color="secondary" />
+
+      <Switch />
     </Box>
   );
 }

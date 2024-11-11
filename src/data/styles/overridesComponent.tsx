@@ -162,5 +162,78 @@ export const getOverridesComponent = (): Components<
         },
       },
     },
+    MuiSwitch: {
+      defaultProps: {
+        disableRipple: true,
+      },
+      styleOverrides: {
+        root: {
+          width: 50,
+          height: 24,
+          padding: 0,
+
+          ":hover": {
+            "& .MuiSwitch-track": {
+              borderColor: primaryColor,
+            },
+            "& .MuiSwitch-switchBase": {
+              "&.Mui-checked": {
+                "& + .MuiSwitch-track": {
+                  backgroundColor: grey1,
+                },
+
+                "& .MuiSwitch-thumb": {
+                  border: `0.5px solid ${primaryColor}`,
+                },
+              },
+            },
+          },
+
+          "& .MuiSwitch-track": {
+            border: `0.5px solid ${black1}`,
+            borderRadius: 35,
+            backgroundColor: grey1,
+            opacity: 1,
+            transition: {
+              duration: 500,
+            },
+          },
+
+          "& .MuiSwitch-switchBase": {
+            padding: 0,
+            margin: 2,
+            transitionDuration: "300ms",
+            "&.Mui-checked": {
+              transform: `translateX(${50 - 24}px)`,
+              "& + .MuiSwitch-track": {
+                backgroundColor: primaryColor,
+                opacity: 1,
+                border: 0,
+              },
+              // "&.Mui-disabled + .MuiSwitch-track": {
+              //   opacity: 0.5,
+              // },
+            },
+            "&.Mui-focusVisible .MuiSwitch-thumb": {
+              color: "primaryColor",
+              border: "6px solid #fff",
+            },
+            // "&.Mui-disabled .MuiSwitch-thumb": {
+            //   color: black1,
+            // },
+            // "&.Mui-disabled + .MuiSwitch-track": {
+            //   opacity: 0.7,
+            // },
+          },
+          "& .MuiSwitch-thumb": {
+            boxSizing: "border-box",
+            width: 20,
+            height: 20,
+            color: black1,
+            border: `0.5px solid ${grey2}`,
+          },
+        },
+      },
+    },
   };
 };

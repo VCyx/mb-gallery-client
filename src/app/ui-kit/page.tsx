@@ -1,11 +1,13 @@
 "use client";
 
 import {
+  Autocomplete,
   Box,
   Button,
   Checkbox,
   Stack,
   Switch,
+  TextField,
   Typography,
 } from "@mui/material";
 import Favourite from "../../../public/icons/favourite.svg";
@@ -110,6 +112,13 @@ export default function UiKit() {
       <Checkbox size="small" color="secondary" />
 
       <Switch />
+
+      <Autocomplete
+        disablePortal
+        options={["Option 1", "Option 2", "Option 3", "Option 4", "Option 5"]}
+        sx={{ width: 300 }}
+        renderInput={(params) => <TextField {...params} label="Controllable" />}
+      />
     </Box>
   );
 }

@@ -235,5 +235,20 @@ export const getOverridesComponent = (): Components<
         },
       },
     },
+    // todo here!
+    MuiAutocomplete: {
+      styleOverrides: {
+        root: {
+          // color: primaryText,
+          backgroundColor: black1,
+
+          "& .MuiOutlinedInput-notchedOutline": {
+            borderRadius: 4,
+            borderSize: 0.5,
+            borderColor: primaryText,
+          },
+        },
+      },
+    },
   };
 };

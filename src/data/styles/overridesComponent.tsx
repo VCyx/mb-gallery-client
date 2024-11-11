@@ -214,10 +214,10 @@ export const getOverridesComponent = (): Components<
               //   opacity: 0.5,
               // },
             },
-            "&.Mui-focusVisible .MuiSwitch-thumb": {
-              color: "primaryColor",
-              border: "6px solid #fff",
-            },
+            // "&.Mui-focusVisible .MuiSwitch-thumb": {
+            //   color: "primaryColor",
+            //   border: "6px solid #fff",
+            // },
             // "&.Mui-disabled .MuiSwitch-thumb": {
             //   color: black1,
             // },

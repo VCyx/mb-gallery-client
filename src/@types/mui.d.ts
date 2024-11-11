@@ -41,6 +41,6 @@ declare module "@mui/material/Typography" {
 
 declare module "@mui/material/Chip" {
   interface ChipOwnProps {
-    disableRipple: boolean;
+    disableRipple?: boolean;
   }
 }

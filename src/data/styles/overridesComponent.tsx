@@ -3,6 +3,7 @@ import { black1, grey1, grey2, primaryColor, primaryText } from "./colors";
 import { Theme } from "@mui/material/styles/createThemeNoVars";
 import { CssVarsTheme } from "@mui/material/styles/createThemeWithVars";
 import { getTypography } from "@/data/styles/typography";
+import DoneIcon from "../../../public/icons/done.svg";
 
 export const getOverridesComponent = (): Components<
   Omit<Theme, "components" | "palette"> & CssVarsTheme
@@ -129,18 +130,37 @@ export const getOverridesComponent = (): Components<
         },
       },
     },
-    // MuiLink: {
-    //   styleOverrides: {
-    //     root: {
-    //       // fontFamily: fontSourceSansPro,
-    //       fontStyle: "italic",
-    //       fontWeight: 400,
-    //       fontSize: 14,
-    //       lineHeight: "18px",
-    //       cursor: "pointer",
-    //       textDecoration: "none",
-    //     },
-    //   },
-    // },
+    MuiCheckbox: {
+      defaultProps: {
+        disableRipple: true,
+        checkedIcon: <DoneIcon style={{ color: primaryColor }} />,
+      },
+      styleOverrides: {
+        root: {
+          padding: 0,
+          borderRadius: 2,
+
+          "& .MuiSvgIcon-root": {
+            fill: "none",
+          },
+          "&.Mui-checked": {
+            color: grey1,
+            border: `0.5px solid ${primaryColor}`,
+          },
+        },
+        sizeSmall: {
+          width: 16,
+          height: 16,
+        },
+        colorPrimary: {
+          color: primaryText,
+          border: `0.5px solid ${primaryText}`,
+        },
+        colorSecondary: {
+          color: black1,
+          border: `0.5px solid ${black1}`,
+        },
+      },
+    },
   };
 };

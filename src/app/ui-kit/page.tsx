@@ -1,9 +1,9 @@
 "use client";
 
-import { Box, Button, Chip, Stack, Typography } from "@mui/material";
-import Cross from "../../../public/icons/cross.svg";
+import { Box, Button, Checkbox, Stack, Typography } from "@mui/material";
 import Favourite from "../../../public/icons/favourite.svg";
-import { useState } from "react";
+import { Fragment, useState } from "react";
+import Chip from "@/components/Chip/Chip";
 
 export default function UiKit() {
   const [selectedChip, setSelectedChip] = useState<number | null>(null);
@@ -92,12 +92,15 @@ export default function UiKit() {
             label={label}
             variant="outlined"
             icon={index === 0 ? <Favourite /> : <></>}
-            onClick={() => handleChipClick(index)} // Выбор чипа
+            isActive={index === selectedChip}
+            onClick={() => handleChipClick(index)}
             onDelete={handleDeleteChip}
-            deleteIcon={selectedChip === index ? <Cross /> : <></>}
           />
         ))}
       </Stack>
+
+      <Checkbox size="small" color="primary" />
+      <Checkbox size="small" color="secondary" />
     </Box>
   );
 }

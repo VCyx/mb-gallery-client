@@ -38,3 +38,9 @@ declare module "@mui/material/Typography" {
     overline2: true;
   }
 }
+
+declare module "@mui/material/Chip" {
+  interface ChipOwnProps {
+    disableRipple: boolean;
+  }
+}

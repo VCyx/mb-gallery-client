@@ -80,7 +80,7 @@ export const getOverridesComponent = (): Components<
         contained: {
           ":hover": {
             color: primaryColor,
-            backgroundColor: black1,
+            backgroundColor: "transparent",
             border: `0.5px solid ${primaryColor}`,
           },
           ":active": {
@@ -123,10 +123,12 @@ export const getOverridesComponent = (): Components<
           },
         },
         icon: {
+          marginLeft: 10,
           width: 16,
           height: 16,
         },
         deleteIcon: {
+          marginRight: 10,
           width: 16,
           height: 16,
         },

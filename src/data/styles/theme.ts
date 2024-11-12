@@ -20,6 +20,9 @@ export const theme = createTheme({
     primary: {
       main: primaryColor,
     },
+    secondary: {
+      main: primaryText,
+    },
     grey: {
       "200": grey2,
       "300": grey1,

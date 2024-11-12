@@ -34,6 +34,7 @@ export default function UiKit() {
         justifyContent: "center",
         alignItems: "center",
         gap: 0.5,
+        // backgroundColor: "white",
       }}
     >
       <Typography variant="h1">H1</Typography>
@@ -116,11 +117,28 @@ export default function UiKit() {
       <Autocomplete
         disablePortal
         options={["USA", "Ukraine", "Option 3", "Option 4", "Option 5"]}
-        sx={{ width: 320 }}
+        sx={{ mb: 2, width: 320 }}
         size="small"
         renderInput={(params) => (
           <TextField {...params} label="Country/Region" />
         )}
+      />
+
+      <TextField
+        sx={{ mb: 1, width: 320 }}
+        color="secondary"
+        variant="outlined"
+        size="small"
+        label="Name"
+      />
+
+      <TextField
+        error
+        sx={{ width: 320 }}
+        color="secondary"
+        variant="outlined"
+        size="small"
+        label="Name"
       />
     </Box>
   );

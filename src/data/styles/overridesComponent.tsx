@@ -142,6 +142,11 @@ export const getOverridesComponent = (): Components<
           padding: 0,
           borderRadius: 2,
 
+          ":hover": {
+            backgroundColor: grey1,
+            border: `0.5px solid ${primaryColor}`,
+          },
+
           "& .MuiSvgIcon-root": {
             fill: "none",
           },
@@ -245,7 +250,7 @@ export const getOverridesComponent = (): Components<
       styleOverrides: {
         root: {
           // color: primaryText,
-          backgroundColor: black1,
+          // backgroundColor: black1,
           ...typography.button,
 
           "& .MuiOutlinedInput-notchedOutline": {
@@ -271,6 +276,19 @@ export const getOverridesComponent = (): Components<
 
           "& .MuiInputBase-input.MuiOutlinedInput-input": {
             ...typography.button,
+          },
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderSize: 0.5,
+          borderColor: primaryText,
+          borderRadius: 4,
+
+          ":hover": {
+            background: "#28282880",
           },
         },
       },

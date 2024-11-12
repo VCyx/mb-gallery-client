@@ -115,9 +115,12 @@ export default function UiKit() {
 
       <Autocomplete
         disablePortal
-        options={["Option 1", "Option 2", "Option 3", "Option 4", "Option 5"]}
-        sx={{ width: 300 }}
-        renderInput={(params) => <TextField {...params} label="Controllable" />}
+        options={["USA", "Ukraine", "Option 3", "Option 4", "Option 5"]}
+        sx={{ width: 320 }}
+        size="small"
+        renderInput={(params) => (
+          <TextField {...params} label="Country/Region" />
+        )}
       />
     </Box>
   );

@@ -4,6 +4,8 @@ import { Theme } from "@mui/material/styles/createThemeNoVars";
 import { CssVarsTheme } from "@mui/material/styles/createThemeWithVars";
 import { getTypography } from "@/data/styles/typography";
 import DoneIcon from "../../../public/icons/done.svg";
+import ArrowDown from "../../../public/icons/arrow-down.svg";
+import Cross from "../../../public/icons/cross.svg";
 
 export const getOverridesComponent = (): Components<
   Omit<Theme, "components" | "palette"> & CssVarsTheme
@@ -235,17 +237,40 @@ export const getOverridesComponent = (): Components<
         },
       },
     },
-    // todo here!
     MuiAutocomplete: {
+      defaultProps: {
+        popupIcon: <ArrowDown style={{ width: 24, height: 24 }} />,
+        clearIcon: <Cross style={{ width: 24, height: 24 }} />,
+      },
       styleOverrides: {
         root: {
           // color: primaryText,
           backgroundColor: black1,
+          ...typography.button,
 
           "& .MuiOutlinedInput-notchedOutline": {
             borderRadius: 4,
             borderSize: 0.5,
             borderColor: primaryText,
+          },
+
+          "& .MuiOutlinedInput-root": {
+            padding: "10.5px 16px",
+          },
+
+          "& .MuiFormLabel-root:not(.Mui-focused)": {
+            // paddingLeft: 4,
+            ...typography.button,
+            opacity: "66%",
+            overflow: "visible",
+
+            "&.MuiFormLabel-filled": {
+              fontSize: 15,
+            },
+          },
+
+          "& .MuiInputBase-input.MuiOutlinedInput-input": {
+            ...typography.button,
           },
         },
       },

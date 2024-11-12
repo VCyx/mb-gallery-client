@@ -13,7 +13,8 @@
           "src/data/**/*",
           "src/hooks/**/*",
           "src/lib/**/*",
-          "src/utils/**/*"
+          "src/utils/**/*",
+          "src/app/**/*" // temporary for github pages
         ]
       },
       {

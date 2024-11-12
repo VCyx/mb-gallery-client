@@ -3,6 +3,7 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { theme } from "@/data/styles/theme";
 import { palatino, roboto } from "@/data/fonts/fonts";
+import UiKit from "@/app/ui-kit/page";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,6 +22,7 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>
             <CssBaseline />
             {children}
+            <UiKit />
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

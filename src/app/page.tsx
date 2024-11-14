@@ -5,8 +5,6 @@ import { appRoutes } from "@/data/routes";
 export default function Home() {
   return (
     <div>
-      {/*<header>test</header>*/}
-
       <main>
         <Typography variant="h1">Hello world!</Typography>
 

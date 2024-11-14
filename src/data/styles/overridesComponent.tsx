@@ -20,10 +20,14 @@ export const getOverridesComponent = (): Components<
         },
         body: {
           boxSizing: "border-box",
-          width: "100%",
-          height: "100%",
           margin: 0,
           padding: 0,
+          width: "100%",
+          height: "100%",
+
+          display: "flex",
+          flexDirection: "column",
+
           overflowX: "hidden",
         },
         a: {
@@ -242,44 +246,44 @@ export const getOverridesComponent = (): Components<
         },
       },
     },
-    // MuiAutocomplete: {
-    //   defaultProps: {
-    //     popupIcon: <ArrowDown style={{ width: 24, height: 24 }} />,
-    //     clearIcon: <Cross style={{ width: 24, height: 24 }} />,
-    //   },
-    //   styleOverrides: {
-    //     root: {
-    //       // color: primaryText,
-    //       // backgroundColor: black1,
-    //       ...typography.button,
-    //
-    //       "& .MuiOutlinedInput-notchedOutline": {
-    //         borderRadius: 4,
-    //         borderSize: 0.5,
-    //         borderColor: primaryText,
-    //       },
-    //
-    //       "& .MuiOutlinedInput-root": {
-    //         padding: "10.5px 16px",
-    //       },
-    //
-    //       "& .MuiFormLabel-root:not(.Mui-focused)": {
-    //         // paddingLeft: 4,
-    //         ...typography.button,
-    //         opacity: "66%",
-    //         overflow: "visible",
-    //
-    //         "&.MuiFormLabel-filled": {
-    //           fontSize: 15,
-    //         },
-    //       },
-    //
-    //       "& .MuiInputBase-input.MuiOutlinedInput-input": {
-    //         ...typography.button,
-    //       },
-    //     },
-    //   },
-    // },
+    MuiAutocomplete: {
+      //   defaultProps: {
+      //     popupIcon: <ArrowDown style={{ width: 24, height: 24 }} />,
+      //     clearIcon: <Cross style={{ width: 24, height: 24 }} />,
+      //   },
+      //   styleOverrides: {
+      //     root: {
+      //       // color: primaryText,
+      //       // backgroundColor: black1,
+      //       ...typography.button,
+      //
+      //       "& .MuiOutlinedInput-notchedOutline": {
+      //         borderRadius: 4,
+      //         borderSize: 0.5,
+      //         borderColor: primaryText,
+      //       },
+      //
+      //       "& .MuiOutlinedInput-root": {
+      //         padding: "10.5px 16px",
+      //       },
+      //
+      //       "& .MuiFormLabel-root:not(.Mui-focused)": {
+      //         // paddingLeft: 4,
+      //         ...typography.button,
+      //         opacity: "66%",
+      //         overflow: "visible",
+      //
+      //         "&.MuiFormLabel-filled": {
+      //           fontSize: 15,
+      //         },
+      //       },
+      //
+      //       "& .MuiInputBase-input.MuiOutlinedInput-input": {
+      //         ...typography.button,
+      //       },
+      //     },
+      //   },
+    },
     MuiSelect: {
       styleOverrides: {
         root: {

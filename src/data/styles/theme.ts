@@ -33,6 +33,7 @@ export const theme = createTheme({
     },
     background: {
       default: black2,
+      paper: black2,
     },
   },
   components: getOverridesComponent(),

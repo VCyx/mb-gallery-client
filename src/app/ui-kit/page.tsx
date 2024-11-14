@@ -1,10 +1,14 @@
 "use client";
 
 import {
-  Autocomplete,
   Box,
   Button,
   Checkbox,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
   Stack,
   Switch,
   TextField,
@@ -13,9 +17,13 @@ import {
 import Favourite from "../../../public/icons/favourite.svg";
 import { Fragment, useState } from "react";
 import Chip from "@/components/Chip/Chip";
+import ArrowDown from "../../../public/icons/arrow-down.svg";
+
+const dropdownItems = ["USA", "Ukraine"];
 
 export default function UiKit() {
   const [selectedChip, setSelectedChip] = useState<number | null>(null);
+  const [activeDropdownEl, setActiveDropdownEl] = useState<string>(null);
 
   const handleDeleteChip = () => {
     console.info("You clicked the delete icon.");
@@ -23,6 +31,10 @@ export default function UiKit() {
 
   const handleChipClick = (index: number) => {
     setSelectedChip(index === selectedChip ? null : index);
+  };
+
+  const handleSelectChange = (event: SelectChangeEvent) => {
+    setActiveDropdownEl(event.target.value as string);
   };
 
   return (
@@ -114,15 +126,61 @@ export default function UiKit() {
 
       <Switch />
 
-      <Autocomplete
-        disablePortal
-        options={["USA", "Ukraine", "Option 3", "Option 4", "Option 5"]}
-        sx={{ mb: 2, width: 320 }}
-        size="small"
-        renderInput={(params) => (
-          <TextField {...params} label="Country/Region" />
-        )}
-      />
+      {/*<Autocomplete*/}
+      {/*  disablePortal*/}
+      {/*  options={["USA", "Ukraine", "Option 3", "Option 4", "Option 5"]}*/}
+      {/*  sx={{ mb: 2, width: 320 }}*/}
+      {/*  size="small"*/}
+      {/*  renderInput={(params) => (*/}
+      {/*    <TextField {...params} label="Country/Region" />*/}
+      {/*  )}*/}
+      {/*/>*/}
+
+      <FormControl sx={{ mb: 1, width: 320 }}>
+        <InputLabel>Country/Region</InputLabel>
+        <Select
+          size="small"
+          value={activeDropdownEl}
+          label="Country/Region"
+          onChange={handleSelectChange}
+          IconComponent={(props) => (
+            <ArrowDown
+              style={{
+                width: 24,
+                height: 24,
+              }}
+              {...props}
+            />
+          )}
+        >
+          {dropdownItems.map((item) => {
+            return (
+              <MenuItem key={item} value={item}>
+                {item}
+              </MenuItem>
+            );
+          })}
+        </Select>
+      </FormControl>
+
+      <FormControl disabled sx={{ mb: 1, width: 320 }}>
+        <InputLabel>Country/Region</InputLabel>
+        <Select
+          size="small"
+          value={activeDropdownEl}
+          label="Country/Region"
+          onChange={handleSelectChange}
+          IconComponent={(props) => (
+            <ArrowDown
+              style={{
+                width: 24,
+                height: 24,
+              }}
+              {...props}
+            />
+          )}
+        ></Select>
+      </FormControl>
 
       <TextField
         sx={{ mb: 1, width: 320 }}

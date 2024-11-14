@@ -4,8 +4,6 @@ import { Theme } from "@mui/material/styles/createThemeNoVars";
 import { CssVarsTheme } from "@mui/material/styles/createThemeWithVars";
 import { getTypography } from "@/data/styles/typography";
 import DoneIcon from "../../../public/icons/done.svg";
-import ArrowDown from "../../../public/icons/arrow-down.svg";
-import Cross from "../../../public/icons/cross.svg";
 
 export const getOverridesComponent = (): Components<
   Omit<Theme, "components" | "palette"> & CssVarsTheme
@@ -244,40 +242,105 @@ export const getOverridesComponent = (): Components<
         },
       },
     },
-    MuiAutocomplete: {
-      defaultProps: {
-        popupIcon: <ArrowDown style={{ width: 24, height: 24 }} />,
-        clearIcon: <Cross style={{ width: 24, height: 24 }} />,
-      },
+    // MuiAutocomplete: {
+    //   defaultProps: {
+    //     popupIcon: <ArrowDown style={{ width: 24, height: 24 }} />,
+    //     clearIcon: <Cross style={{ width: 24, height: 24 }} />,
+    //   },
+    //   styleOverrides: {
+    //     root: {
+    //       // color: primaryText,
+    //       // backgroundColor: black1,
+    //       ...typography.button,
+    //
+    //       "& .MuiOutlinedInput-notchedOutline": {
+    //         borderRadius: 4,
+    //         borderSize: 0.5,
+    //         borderColor: primaryText,
+    //       },
+    //
+    //       "& .MuiOutlinedInput-root": {
+    //         padding: "10.5px 16px",
+    //       },
+    //
+    //       "& .MuiFormLabel-root:not(.Mui-focused)": {
+    //         // paddingLeft: 4,
+    //         ...typography.button,
+    //         opacity: "66%",
+    //         overflow: "visible",
+    //
+    //         "&.MuiFormLabel-filled": {
+    //           fontSize: 15,
+    //         },
+    //       },
+    //
+    //       "& .MuiInputBase-input.MuiOutlinedInput-input": {
+    //         ...typography.button,
+    //       },
+    //     },
+    //   },
+    // },
+    MuiSelect: {
       styleOverrides: {
         root: {
-          // color: primaryText,
-          // backgroundColor: black1,
-          ...typography.button,
-
-          "& .MuiOutlinedInput-notchedOutline": {
-            borderRadius: 4,
-            borderSize: 0.5,
-            borderColor: primaryText,
+          "& .MuiSelect-icon": {
+            top: "calc(50% - 12px)",
           },
+        },
+      },
+    },
+    MuiFormControl: {
+      styleOverrides: {
+        root: {
+          // For the Select but not TextField
+          "&:not(.MuiTextField-root)": {
+            "& .MuiFormLabel-root.MuiInputLabel-root": {
+              ...typography.button,
+              opacity: "66%",
+              overflow: "visible",
 
-          "& .MuiOutlinedInput-root": {
-            padding: "10.5px 16px",
-          },
+              ":not(.Mui-focused)": {
+                top: -8,
 
-          "& .MuiFormLabel-root:not(.Mui-focused)": {
-            // paddingLeft: 4,
-            ...typography.button,
-            opacity: "66%",
-            overflow: "visible",
-
-            "&.MuiFormLabel-filled": {
-              fontSize: 15,
+                "&.MuiFormLabel-filled": {
+                  top: 0,
+                },
+              },
             },
           },
+        },
+      },
+    },
+    MuiPopover: {
+      styleOverrides: {
+        root: {
+          "& .MuiPaper-root.MuiPaper-elevation": {
+            padding: "8px 16px",
+            transform: "translateY(6px) !important",
+            backgroundImage: "none",
 
-          "& .MuiInputBase-input.MuiOutlinedInput-input": {
-            ...typography.button,
+            border: `0.5px solid ${primaryText}`,
+            borderRadius: 4,
+          },
+        },
+      },
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          ...typography.body1,
+
+          borderRadius: 4,
+          backgroundColor: "transparent !important",
+
+          "&.Mui-selected": {
+            backgroundColor: "transparent",
+            color: primaryColor,
+          },
+
+          ":hover": {
+            color: black1,
+            backgroundColor: `${primaryColor} !important`,
           },
         },
       },
@@ -290,7 +353,13 @@ export const getOverridesComponent = (): Components<
           borderRadius: 4,
 
           ":hover": {
-            background: "#28282880",
+            background: grey1,
+          },
+
+          "&.Mui-disabled": {
+            svg: {
+              opacity: 0.5,
+            },
           },
         },
       },

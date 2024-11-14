@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === "production";
+// const isProd = process.env.NODE_ENV === "production";
+const isProd = true;
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -8,6 +9,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
+  // assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || "",
+  // basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
   assetPrefix: isProd ? "/mb-gallery-client/" : "",
   basePath: isProd ? "/mb-gallery-client" : "",
   output: "export",

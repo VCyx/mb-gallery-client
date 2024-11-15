@@ -23,7 +23,9 @@ const dropdownItems = ["USA", "Ukraine"];
 
 export default function UiKit() {
   const [selectedChip, setSelectedChip] = useState<number | null>(null);
-  const [activeDropdownEl, setActiveDropdownEl] = useState<string>(null);
+  const [activeDropdownEl, setActiveDropdownEl] = useState<string | undefined>(
+    undefined,
+  );
 
   const handleDeleteChip = () => {
     console.info("You clicked the delete icon.");

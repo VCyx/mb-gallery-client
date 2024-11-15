@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Container } from "@mui/material";
+import { Container, Link } from "@mui/material";
 import Logo from "@/components/Header/Logo";
 import Image from "next/image";
 import maestroBathLogo from "../../../public/images/maestro-bath.png";
@@ -99,9 +99,9 @@ const Footer: FC = () => {
       <FooterLinksColumns title="Get help" items={getHelpItems} />
       <FooterLinksColumns title="Connect" items={connectItems} />
 
-      <a href={foreignLinks.maestroBath} target={"_blank"}>
+      <Link href={foreignLinks.maestroBath} target={"_blank"}>
         <Image src={maestroBathLogo} alt={"Maestro Bath"} />
-      </a>
+      </Link>
     </Container>
   );
 };

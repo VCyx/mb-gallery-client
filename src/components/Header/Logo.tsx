@@ -10,7 +10,7 @@ const Logo: FC = () => {
 
   return (
     <Typography
-      sx={{ cursor: "pointer" }}
+      sx={{ width: 110, cursor: "pointer" }}
       variant="h1"
       onClick={() => push(appRoutes.mainPage)}
     >

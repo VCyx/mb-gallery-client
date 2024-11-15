@@ -53,11 +53,11 @@ export const getOverridesComponent = (): Components<
           backgroundColor: primaryColor,
         },
         "::-webkit-scrollbar": {
-          width: "10px",
+          width: "4px",
         },
         "::-webkit-scrollbar-thumb": {
-          // background: borderColor,
-          borderRadius: "8px",
+          background: grey2,
+          borderRadius: "4px",
         },
       },
     },
@@ -364,6 +364,18 @@ export const getOverridesComponent = (): Components<
             svg: {
               opacity: 0.5,
             },
+          },
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecoration: "none",
+          color: primaryText,
+
+          ":hover": {
+            color: primaryColor,
           },
         },
       },

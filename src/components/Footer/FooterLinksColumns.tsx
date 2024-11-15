@@ -34,6 +34,7 @@ const FooterLinksColumns: FC<Props> = ({ title, items }) => {
         {items.map((item) => {
           return (
             <Link
+              variant={"body1"}
               key={item.name}
               href={item.name}
               target={"_blank"}
@@ -44,7 +45,7 @@ const FooterLinksColumns: FC<Props> = ({ title, items }) => {
               }}
             >
               {item.icon}
-              <Typography variant="body1">{item.name}</Typography>
+              {item.name}
             </Link>
           );
         })}

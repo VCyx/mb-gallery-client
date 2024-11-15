@@ -35,6 +35,11 @@ export const theme = createTheme({
       default: black2,
       paper: black2,
     },
+    action: {
+      hover: primaryColor,
+      selected: primaryColor,
+      selectedOpacity: 1,
+    },
   },
   components: getOverridesComponent(),
   typography: getTypography(),

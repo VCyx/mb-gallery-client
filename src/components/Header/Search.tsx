@@ -3,8 +3,8 @@
 import React, { FC } from "react";
 import { Autocomplete, TextField } from "@mui/material";
 import Image1 from "../../../public/icons/image-1.svg";
-import Cross from "../../../public/icons/cross.svg";
 import { getTypography } from "@/data/styles/typography";
+import { black1, primaryColor } from "@/data/styles/colors";
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const top100Films = [
@@ -58,24 +58,84 @@ const Search: FC = () => {
     };
   });
 
-  // todo here! work on search styles and header
-
   return (
     <Autocomplete
       sx={{
         "& .MuiAutocomplete-popupIndicator": {
-          "&..MuiAutocomplete-popupIndicatorOpen": {
-            scale: 1,
+          "&.MuiAutocomplete-popupIndicatorOpen": {
+            transform: "rotate(0)",
           },
+        },
+
+        "& .MuiInputBase-input": {
+          paddingLeft: "38px !important",
         },
       }}
       options={options.sort(
         (a, b) => -b.firstLetter.localeCompare(a.firstLetter),
       )}
+      open={true}
       groupBy={(option) => option.firstLetter}
       getOptionLabel={(option) => option.title}
       popupIcon={<Image1 style={popupIconStyles} />}
-      clearIcon={<Cross style={{ width: 24, height: 24 }} />}
+      // clearIcon={<Cross style={{ popupIconStyles }} />}
+      slotProps={{
+        popper: {
+          sx: {
+            "& .MuiListSubheader-root": {
+              opacity: "66%",
+              ...typography.overline2,
+            },
+          },
+        },
+        paper: {
+          sx: {
+            bgcolor: "grey.400",
+            borderTop: `1px solid #000000`,
+            ...typography.body2,
+
+            "& .MuiAutocomplete-listbox": {
+              padding: "16px",
+            },
+
+            // todo here! fix mess with hover and active
+
+            "& .MuiAutocomplete-option": {
+              "&.Mui-focused[aria-selected=false]": {
+                bgcolor: "primary.main",
+                color: black1,
+                borderRadius: "4px",
+              },
+
+              "&[aria-selected=true]": {
+                bgcolor: "transparent",
+                color: primaryColor,
+
+                borderRadius: "4px",
+
+                "&.Mui-focused": {
+                  bgcolor: "transparent !important",
+                  color: `${primaryColor} !important`,
+
+                  borderRadius: "4px",
+                },
+
+                "&:hover": {
+                  bgcolor: "primary.main",
+                  color: black1,
+                  borderRadius: "4px",
+                },
+              },
+
+              ":hover": {
+                bgcolor: "primary.main",
+                color: black1,
+                borderRadius: "4px",
+              },
+            },
+          },
+        },
+      }}
       renderInput={(params) => (
         <TextField
           sx={{

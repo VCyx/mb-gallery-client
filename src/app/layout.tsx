@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import { theme } from "@/data/styles/theme";
 import { palatino, roboto } from "@/data/fonts/fonts";
 import Header from "@/components/Header/Header";
@@ -24,7 +24,15 @@ export default function RootLayout({
             <CssBaseline />
 
             <Header />
-            {children}
+            <Box
+              component={"main"}
+              sx={{
+                height: "100%",
+                bgcolor: "grey.400",
+              }}
+            >
+              {children}
+            </Box>
             <Footer />
           </ThemeProvider>
         </AppRouterCacheProvider>

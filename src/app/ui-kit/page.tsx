@@ -48,7 +48,6 @@ export default function UiKit() {
         justifyContent: "center",
         alignItems: "center",
         gap: 0.5,
-        // backgroundColor: "white",
       }}
     >
       <Typography variant="h1">H1</Typography>

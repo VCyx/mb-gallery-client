@@ -54,14 +54,7 @@ const Header: FC = () => {
 
       <LoginActionsBlock />
 
-      <Link
-        sx={{
-          marginRight: "auto",
-          display: "flex",
-        }}
-        href={foreignLinks.maestroBath}
-        target={"_blank"}
-      >
+      <Link href={foreignLinks.maestroBath} target={"_blank"}>
         <Image
           src={maestroBathLogo}
           alt={"Maestro Bath"}
